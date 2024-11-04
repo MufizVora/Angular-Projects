@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Note } from './interfaces/note';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Notes-App';
+  selectedNote!: Note
+
+  selectNote(note : Note){
+    this.selectedNote = note;
+  }
 }
